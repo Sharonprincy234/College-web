@@ -212,6 +212,40 @@ a {
 a:hover {
   color: #80c1ff;
 }
+  /* REMOVE solid backgrounds hiding animation */
+.home-section,
+.info-section,
+.contact-section,
+header,
+footer {
+  background: transparent !important;
+}
+
+/* Add glass effect instead */
+.container,
+.contact-form-container,
+.contact-info {
+  background: rgba(10, 15, 35, 0.75);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+h1, h2, h3, p, li, a {
+  color: #e8ecff;
+}
+
+.menu a {
+  color: #ffffff;
+}
+.dark-bg {
+  z-index: -1;
+}
+
+body {
+  position: relative;
+}
+
 
 
 }
