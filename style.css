@@ -23,6 +23,14 @@ header {
   color: grey;
   padding: 15px 0;
 }
+.campus-img {
+  width: 60%;
+  max-width: 600px;
+  display: block;
+  margin: 40px auto;
+  border-radius: 12px;
+}
+
 
 .logo {
   font-size: 22px;
