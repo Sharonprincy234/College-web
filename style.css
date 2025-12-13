@@ -138,4 +138,115 @@ footer {
   .contact-form-container {
     padding: 15px;
   }
+  /* ========================= */
+/* Bubble Background */
+/* ========================= */
+
+.bubble-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  background: linear-gradient(to bottom, #eaf3ff, #ffffff);
+}
+
+.bubble-background span {
+  position: absolute;
+  bottom: -100px;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 123, 255, 0.15);
+  border-radius: 50%;
+  animation: bubble 20s linear infinite;
+}
+
+/* Different bubble sizes & speeds */
+.bubble-background span:nth-child(1) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-duration: 12s;
+}
+
+.bubble-background span:nth-child(2) {
+  left: 20%;
+  width: 50px;
+  height: 50px;
+  animation-duration: 18s;
+}
+
+.bubble-background span:nth-child(3) {
+  left: 30%;
+  width: 30px;
+  height: 30px;
+  animation-duration: 14s;
+}
+
+.bubble-background span:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-duration: 22s;
+}
+
+.bubble-background span:nth-child(5) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-duration: 13s;
+}
+
+.bubble-background span:nth-child(6) {
+  left: 60%;
+  width: 45px;
+  height: 45px;
+  animation-duration: 19s;
+}
+
+.bubble-background span:nth-child(7) {
+  left: 70%;
+  width: 35px;
+  height: 35px;
+  animation-duration: 16s;
+}
+
+.bubble-background span:nth-child(8) {
+  left: 80%;
+  width: 55px;
+  height: 55px;
+  animation-duration: 21s;
+}
+
+.bubble-background span:nth-child(9) {
+  left: 90%;
+  width: 25px;
+  height: 25px;
+  animation-duration: 15s;
+}
+
+.bubble-background span:nth-child(10) {
+  left: 95%;
+  width: 40px;
+  height: 40px;
+  animation-duration: 17s;
+}
+
+/* Bubble animation */
+@keyframes bubble {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
 }
