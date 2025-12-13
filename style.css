@@ -245,6 +245,51 @@ h1, h2, h3, p, li, a {
 body {
   position: relative;
 }
+  /* Home section with college photo */
+.home-section {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  /* College image */
+  background: 
+    linear-gradient(rgba(5,10,25,0.7), rgba(5,10,25,0.7)),
+    url("college.jpg") center/cover no-repeat;
+}
+
+/* Improve text readability */
+.home-section h2,
+.home-section p {
+  color: #ffffff;
+}
+.home-section {
+  background-color: transparent;
+}
+.home-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+.home-section {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 
 
