@@ -20,7 +20,7 @@ body {
 /* Header */
 header {
   background: #003366;
-  color: grey;
+  color: red;
   padding: 15px 0;
 }
 .campus-img {
@@ -45,7 +45,7 @@ nav ul {
 }
 
 nav ul li a {
-  color: grey;
+  color: red;
   text-decoration: none;
   font-size: 14px;
 }
