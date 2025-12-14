@@ -283,10 +283,6 @@ body {
   margin-bottom: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
-.home-section {
-  animation: fadeIn 1.2s ease-in-out;
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
