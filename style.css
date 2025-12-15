@@ -49,17 +49,17 @@ header {
 }
 
 .logo-box h1 {
-  font-size: 42px;
+  font-size: 200px;
   font-weight: bold;
-  color: #002244;
+  color: yellow;
   margin-bottom: 5px;
   text-transform: uppercase;
 }
 
 .logo-box h2 {
-  font-size: 42px;
+  font-size: 200px;
   font-weight: bold;
-  color: #002244;
+  color: yellow;
 }
 
 
@@ -73,7 +73,7 @@ header {
 
 .logo-text span {
   font-size: 20px;
-  color: #ffcc00;
+  color: yellow;
 }
 
 /* Menu */
