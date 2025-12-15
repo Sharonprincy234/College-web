@@ -66,13 +66,13 @@ header {
 /* Left text */
 .logo-text {
   color: #fff;
-  font-size: 18px;
+  font-size: 200px;
   font-weight: bold;
   line-height: 1.3;
 }
 
 .logo-text span {
-  font-size: 20px;
+  font-size: 200px;
   color: yellow;
 }
 
