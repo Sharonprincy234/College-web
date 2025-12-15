@@ -26,18 +26,21 @@ body {
 .main-header {
   width: 100%;
   background: radial-gradient(circle at top, #0a1633, #000814);
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 .header-inner {
   width: 95%;
-  max-width: 1600px;
   margin: auto;
 
-  display: flex;                /* 🔥 ROW LAYOUT */
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 20px;
+
+  flex-wrap: nowrap;  /* 🔥 NEVER vertical */
+}
+
 }
 .main-header {
   width: 100%;
@@ -71,23 +74,24 @@ body {
   justify-content: space-between;
   gap: 30px;
 }
-.nav-left {
-  flex: 1;
+.nav-right {
+  overflow-x: auto;           /* 🔥 scroll on mobile */
 }
 
 .menu {
   list-style: none;
   display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
+  gap: 12px;
+  white-space: nowrap;        /* 🔥 keep horizontal */
 }
 
 .menu li a {
-  padding: 10px 22px;
+  padding: 9px 18px;
   background: #1ec9ff;
   color: #fff;
   border-radius: 30px;
   text-decoration: none;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -98,28 +102,22 @@ body {
 
 /* TITLE BOX */
 .logo-box {
-  flex: 1.2;                    /* 🔥 more space for title */
+  min-width: 320px;
   background: linear-gradient(135deg, #ffcc00, #ff9900);
-  padding: 30px 40px;
-  border-radius: 18px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  padding: 20px 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
 .logo-box h1 {
-  font-size: 42px;
+  font-size: 34px;
   font-weight: 800;
   color: #003366;
-  margin: 0 0 10px 0;
-  text-transform: uppercase;
+  margin: 0 0 6px;
 }
 
 .logo-box h2 {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   color: #002244;
   margin: 0;
