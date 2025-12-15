@@ -1,4 +1,6 @@
-/* Global Reset */
+/* ============================= */
+/* GLOBAL RESET */
+/* ============================= */
 * {
   margin: 0;
   padding: 0;
@@ -8,126 +10,104 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  background-color: #0b0f1a;
+  color: #eaeaf0;
+  position: relative;
 }
 
-/* Container */
+/* ============================= */
+/* CONTAINER */
+/* ============================= */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
+  padding: 20px;
 }
 
-/* Header */
+/* ============================= */
+/* HEADER & NAVBAR */
+/* ============================= */
 header {
-  background: #003366;
-  color: grey;
-  padding: 15px 0;
+  background: rgba(10, 15, 35, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  margin: 15px;
 }
-.campus-img {
-  width: 60%;
-  max-width: 600px;
-  display: block;
-  margin: 40px auto;
-  border-radius: 12px;
-}
-/* Home section background */
-.home-section {
-    position: relative;
-    z-index: 2;
-    min-height: 100vh;
-    background-image: url("building-2.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    display: flex;
-    align-items: center;
-}
-.home-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-    z-index: 0;
-}
-
-.home-section .container {
-    position: relative;
-    z-index: 1;
-}
-
-/* Dark overlay */
-.home-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.55);
-    z-index: 0;
-}
-
-.home-section .container {
-    position: relative;
-    z-index: 1;
-}
-
-/* Push animated backgrounds behind */
-.dark-bubble-bg,
-.bubble-background {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-}
-
-
-.home-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* dark overlay */
-    z-index: 0;
-}
-
-.home-section .container {
-    position: relative;
-    z-index: 1;
-}
-
-
 
 .logo {
   font-size: 22px;
+  text-align: center;
+  color: #ffffff;
 }
 
-/* Navbar */
 nav ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 nav ul li a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   font-size: 14px;
 }
 
-/* Home Section */
+nav ul li a:hover {
+  color: #4da6ff;
+}
+
+/* ============================= */
+/* HOME SECTION WITH BACKGROUND */
+/* ============================= */
 .home-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 60px 20px;
-  background: #f0f4f8;
+
+  /* ✅ YOUR IMAGE */
+  background-image: url("building-2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #ffffff;
+  z-index: 1;
+}
+
+/* Dark overlay */
+.home-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+/* Content above overlay */
+.home-section .container {
+  position: relative;
+  z-index: 1;
 }
 
 .home-section h2 {
-  font-size: 24px;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
-/* Info Sections */
+/* ============================= */
+/* INFO SECTIONS */
+/* ============================= */
 .info-section {
+  background: rgba(10, 15, 35, 0.8);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  margin: 15px;
   padding: 40px 20px;
 }
 
@@ -136,24 +116,25 @@ nav ul li a {
   font-size: 22px;
 }
 
-.info-section p {
-  margin-bottom: 10px;
+.info-section p,
+.info-section li {
   font-size: 15px;
-}
- iframe{
-   max-width: 100%;
-   border-radius:12px;
- }
-/* Contact Section */
-.contact-section {
-  padding: 40px 20px;
-  background-color: #f9f9f9;
+  margin-bottom: 8px;
 }
 
-/* Contact Info */
+/* ============================= */
+/* CONTACT SECTION */
+/* ============================= */
+.contact-section {
+  background: rgba(10, 15, 35, 0.8);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  margin: 15px;
+  padding: 40px 20px;
+}
+
 .contact-info {
   text-align: center;
-  margin-bottom: 30px;
 }
 
 .contact-info p {
@@ -161,84 +142,49 @@ nav ul li a {
   margin-bottom: 8px;
 }
 
-/* Contact Form */
-.contact-form-container {
-  width: 100%;
-  max-width: 100%;
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-}
-form-btn{
-  display:inline-block;
-  padding:12px 24px;
-  background:linear-gradient(135dge,#4facfe,#00f2fe);
-  color:white;
-  text-decoration:none;
-  border-radius:30px;
-  font-weight:bold;
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+.form-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
 }
 
-/* Footer */
+.form-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
 footer {
-  background: #003366;
-  color: white;
+  background: rgba(10, 15, 35, 0.9);
+  color: #ffffff;
   text-align: center;
   padding: 15px 10px;
   font-size: 14px;
+  margin: 15px;
+  border-radius: 10px;
 }
 
-/* ========================= */
-/* Mobile Responsive Styles */
-/* ========================= */
-@media (max-width: 768px) {
-
-  nav ul {
-    justify-content: center;
-  }
-
-  .logo {
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  header .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .info-section h2 {
-    font-size: 20px;
-  }
-
-  .info-section p {
-    font-size: 14px;
-  }
-
-  .contact-form-container {
-    padding: 15px;
-  }
-
-/* ================================ */
-/* Dark Mode Animated Background */
-/* ================================ */
-
-body {
-  background-color: #0b0f1a;
-  color: #eaeaf0;
-}
-
-/* Background container */
+/* ============================= */
+/* DARK ANIMATED BUBBLE BACKGROUND */
+/* ============================= */
 .dark-bubble-bg {
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: -2;
   overflow: hidden;
   background: radial-gradient(circle at top, #141b2d, #02040a);
 }
 
-/* Bubble styling */
 .dark-bubble-bg span {
   position: absolute;
   bottom: -120px;
@@ -246,128 +192,48 @@ body {
   height: 40px;
   background: rgba(0, 162, 255, 0.18);
   border-radius: 50%;
-  filter: blur(1px);
   animation: floatUp 18s linear infinite;
 }
 
-/* Individual variations */
-.dark-bubble-bg span:nth-child(1) { left: 5%; width: 20px; height: 20px; animation-duration: 10s; }
-.dark-bubble-bg span:nth-child(2) { left: 15%; width: 50px; height: 50px; animation-duration: 20s; }
-.dark-bubble-bg span:nth-child(3) { left: 25%; width: 30px; height: 30px; animation-duration: 14s; }
-.dark-bubble-bg span:nth-child(4) { left: 35%; width: 60px; height: 60px; animation-duration: 22s; }
-.dark-bubble-bg span:nth-child(5) { left: 45%; width: 25px; height: 25px; animation-duration: 12s; }
-.dark-bubble-bg span:nth-child(6) { left: 55%; width: 45px; height: 45px; animation-duration: 19s; }
-.dark-bubble-bg span:nth-child(7) { left: 65%; width: 35px; height: 35px; animation-duration: 16s; }
-.dark-bubble-bg span:nth-child(8) { left: 75%; width: 55px; height: 55px; animation-duration: 21s; }
-.dark-bubble-bg span:nth-child(9) { left: 85%; width: 25px; height: 25px; animation-duration: 13s; }
-.dark-bubble-bg span:nth-child(10){ left: 95%; width: 40px; height: 40px; animation-duration: 18s; }
+/* Bubble variations */
+.dark-bubble-bg span:nth-child(1) { left: 5%; animation-duration: 12s; }
+.dark-bubble-bg span:nth-child(2) { left: 15%; width: 60px; height: 60px; animation-duration: 20s; }
+.dark-bubble-bg span:nth-child(3) { left: 30%; animation-duration: 15s; }
+.dark-bubble-bg span:nth-child(4) { left: 45%; width: 50px; height: 50px; animation-duration: 22s; }
+.dark-bubble-bg span:nth-child(5) { left: 60%; animation-duration: 14s; }
+.dark-bubble-bg span:nth-child(6) { left: 75%; width: 55px; height: 55px; animation-duration: 21s; }
+.dark-bubble-bg span:nth-child(7) { left: 90%; animation-duration: 16s; }
 
-/* Animation */
 @keyframes floatUp {
   0% {
-    transform: translateY(0) scale(0.9);
+    transform: translateY(0);
     opacity: 0;
   }
   10% {
-    opacity: 0.7;
+    opacity: 0.6;
   }
   100% {
-    transform: translateY(-120vh) scale(1.2);
+    transform: translateY(-120vh);
     opacity: 0;
   }
 }
 
-/* Improve section contrast */
-header, section, footer {
-  background: rgba(10, 15, 30, 0.85);
-  backdrop-filter: blur(6px);
-  border-radius: 8px;
-  margin: 15px;
-}
-
-/* Links */
-a {
-  color: #4da6ff;
-}
-
-a:hover {
-  color: #80c1ff;
-}
-  /* REMOVE solid backgrounds hiding animation */
-.home-section,
-.info-section,
-.contact-section,
-header,
-footer {
-  background: transparent !important;
-}
-
-/* Add glass effect instead */
-.container,
-.contact-form-container,
-.contact-info {
-  background: rgba(10, 15, 35, 0.75);
-  backdrop-filter: blur(8px);
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 30px;
-}
-h1, h2, h3, p, li, a {
-  color: #e8ecff;
-}
-
-.menu a {
-  color: #ffffff;
-}
-.dark-bg {
-  z-index: -1;
-}
-
-body {
-  position: relative;
-}
-  /* Home section with college photo */
-.home-section {
-  position: relative;
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  /* College image */
-  background: 
-    linear-gradient(rgba(5,10,25,0.7), rgba(5,10,25,0.7)),
-    url("college.jpg") center/cover no-repeat;
-}
-
-/* Improve text readability */
-.home-section h2,
-.home-section p {
-  color: #ffffff;
-}
-.home-section {
-  background-color: transparent;
-}
-.home-image {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+@media (max-width: 768px) {
+  .home-section h2 {
+    font-size: 22px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  nav ul {
+    justify-content: center;
   }
-}
 
-
-
-
+  .info-section,
+  .contact-section,
+  footer,
+  header {
+    margin: 10px;
+  }
 }
