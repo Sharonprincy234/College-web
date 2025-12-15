@@ -180,6 +180,20 @@
             <a href="https://forms.gle/n4yHEBNLM6JGEYDN9" target="_blank" class="form-btn">Register Now</a>
         </div>
     </section>
+<script>
+  let index = 0;
+  const slider = document.getElementById("slider");
+  const totalSlides = document.querySelectorAll(".slide").length;
+
+  function slide(direction) {
+    index += direction;
+
+    if (index < 0) index = totalSlides - 1;
+    if (index >= totalSlides) index = 0;
+
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  }
+</script>
 
     <!-- Visit Us Section -->
     <section>
