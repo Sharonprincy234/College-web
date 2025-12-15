@@ -104,6 +104,15 @@ nav ul li a {
   padding: 20px;
   border-radius: 8px;
 }
+form-btn{
+  display:inline-block;
+  padding:12px 24px;
+  background:linear-gradient(135dge,#4facfe,#00f2fe);
+  color:white;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
+}
 
 /* Footer */
 footer {
