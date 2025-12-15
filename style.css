@@ -22,6 +22,72 @@ body {
 /* ============================= */
 /* HEADER & NAVBAR */
 /* ============================= */
+/* FULL HEADER */
+.main-header {
+  width: 100%;
+  min-height: 300px;
+  background: radial-gradient(circle at top, #0a1633, #000814);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* INNER CONTENT */
+.header-inner {
+  width: 95%;
+  max-width: 1600px;  /* wider than before */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TITLE BOX */
+.logo-box {
+  width: 100%;              /* ✅ FULL WIDTH */
+  background: linear-gradient(135deg, #ffcc00, #ff9900);
+  padding: 30px 40px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  text-align: left;
+}
+
+/* TITLES */
+.logo-box h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #003366;
+}
+
+.logo-box h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #002244;
+}
+
+/* MENU */
+.menu {
+  margin-top: 20px;
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu li a {
+  padding: 10px 22px;
+  background: #1ec9ff;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .logo-box h1 { font-size: 32px; }
+  .logo-box h2 { font-size: 20px; }
+  .logo-box { text-align: center; }
+}
+
 header {
   position: fixed;
   top: 0;
