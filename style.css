@@ -236,37 +236,57 @@ header {
   justify-content: center;
 }
 
-/* Post card */
 .post-card {
-  background: #fff;
-  width: 45%;
+  background: #ffffff;
+  width: 420px;              /* 🔥 FIX: limit width */
+  max-width: 100%;
   padding: 15px;
-  border-radius: 14px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  text-align: center;
 }
+
 
 .post-card img {
   width: 100%;
-  border-radius: 10px;
+  height: 260px;             /* 🔥 uniform height */
+  object-fit: cover;
+  border-radius: 12px;
 }
 
-/* Buttons */
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #003366;
-  color: #fff;
-  border: none;
-  font-size: 22px;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 50%;
+
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  gap: 30px;
+  justify-content: center;   /* 🔥 center both posts */
+  align-items: center;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0;
+}
 
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+@media (max-width: 768px) {
+  .slide {
+    flex-direction: column;
+  }
+
+  .post-card {
+    width: 90%;
+  }
+
+  .post-card img {
+    height: 220px;
+  }
+}
 
 
 /* NAV MENU */
