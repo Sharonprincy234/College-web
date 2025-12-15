@@ -30,6 +30,36 @@ header {
   margin: 40px auto;
   border-radius: 12px;
 }
+/* Home section background image */
+.home-section {
+    background-image: url("images/home-bg.jpg"); /* change path as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+    /* Optional overlay effect */
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.home-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* dark overlay */
+    z-index: 0;
+}
+
+.home-section .container {
+    position: relative;
+    z-index: 1;
+}
+
 
 
 .logo {
