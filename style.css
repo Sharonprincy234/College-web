@@ -30,19 +30,42 @@ header {
   margin: 40px auto;
   border-radius: 12px;
 }
-/* Home section background image */
+/* Home section background */
 .home-section {
-    background-image: url("building1.jfif"); /* change path as needed */
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    background-image: url("./images/home-bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
-
-    /* Optional overlay effect */
     color: white;
     display: flex;
     align-items: center;
 }
+
+/* Dark overlay */
+.home-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 0;
+}
+
+.home-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Push animated backgrounds behind */
+.dark-bubble-bg,
+.bubble-background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
 
 .home-section::before {
     content: "";
@@ -75,7 +98,7 @@ nav ul {
 }
 
 nav ul li a {
-  color: grey;
+  color: white;
   text-decoration: none;
   font-size: 14px;
 }
