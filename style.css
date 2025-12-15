@@ -35,13 +35,26 @@ header {
     position: relative;
     z-index: 2;
     min-height: 100vh;
-    background-image: url("College-web/building1.jfif");
+    background-image: url("building1.jfif");
+    background-image: url("./images/building1.jfif");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
     display: flex;
     align-items: center;
+}
+.home-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 0;
+}
+
+.home-section .container {
+    position: relative;
+    z-index: 1;
 }
 
 /* Dark overlay */
