@@ -207,6 +207,66 @@ header {
     font-size: 16px;
   }
 }
+.post-slider-section {
+  width: 90%;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.slider-title {
+  font-size: 32px;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Post card */
+.post-card {
+  background: #fff;
+  width: 45%;
+  padding: 15px;
+  border-radius: 14px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.post-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #003366;
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
 
 
 /* NAV MENU */
